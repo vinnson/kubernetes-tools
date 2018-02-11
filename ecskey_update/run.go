@@ -7,25 +7,24 @@ import (
 	"strings"
 	"bytes"
 	"fmt"
+	"flag"
 )
 // Defining Variables
 var AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION, AWS_EMAIL_ADDRESS string
 
 func preflight_check() {
-    if AWS_ACCESS_KEY_ID = os.Getenv("AWS_ACCESS_KEY_ID"); len(AWS_ACCESS_KEY_ID) == 0 {
-        log.Fatal("AWS_ACCESS_KEY_ID NOT FOUND, please add your AWS_ACCESS_KEY_ID in ENV")
-    }
-    if AWS_SECRET_ACCESS_KEY = os.Getenv("AWS_SECRET_ACCESS_KEY"); len(AWS_SECRET_ACCESS_KEY) == 0 {
-        log.Fatal("AWS_SECRET_ACCESS_KEY NOT FOUND, please add your AWS_ACCESS_KEY_ID in ENV")
-    }
-    if AWS_DEFAULT_REGION = os.Getenv("AWS_DEFAULT_REGION"); len(AWS_DEFAULT_REGION) == 0 {
-        AWS_DEFAULT_REGION = "ap-southeast-1"
-    }
-    if AWS_EMAIL_ADDRESS = os.Getenv("AWS_EMAIL_ADDRESS"); len(AWS_EMAIL_ADDRESS) == 0 {
-        AWS_EMAIL_ADDRESS = "yourname@youremail.com"
-    }
+    flag.StringVar(&AWS_ACCESS_KEY_ID, "AWS_ACCESS_KEY_ID", os.Getenv("AWS_ACCESS_KEY_ID"), "Your AWS Access Key ID");
+    flag.StringVar(&AWS_SECRET_ACCESS_KEY, "AWS_SECRET_ACCESS_KEY", os.Getenv("AWS_SECRET_ACCESS_KEY"), "Your AWS Secret Access Key");
+    flag.StringVar(&AWS_DEFAULT_REGION, "AWS_DEFAULT_REGION", os.Getenv("AWS_DEFAULT_REGION"), "AWS Default Region: (Default: ap-southeast-1)");
+    flag.StringVar(&AWS_EMAIL_ADDRESS, "AWS_EMAIL_ADDRESS", os.Getenv("AWS_EMAIL_ADDRESS"), "Registered email address for AWS");
+		flag.Parse();
+
+		if len(AWS_ACCESS_KEY_ID) == 0 || len(AWS_SECRET_ACCESS_KEY) == 0 || len(AWS_EMAIL_ADDRESS) == 0 {
+				log.Fatal("Not enough information, please check your access keys");
+		}
+
     if err := exec.Command("docker").Run(); err != nil {
-		log.Fatal("Docker command not found or not access to docker")
+		log.Fatal("Docker command not found or not access to docker");
 	}
 }
 
