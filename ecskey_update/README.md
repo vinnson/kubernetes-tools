@@ -18,3 +18,9 @@ $ ./ecskey_update
 ```
 
 This is it, you may set it to your crontab and make sure it runs within every 6 hours.
+
+## Crontab Sample
+This is a sample of crontab command to run update in every hous.
+```
+0 * * * * /your_path_of_compiled_ecskey_update/ecskey_update >> /dev/null
+```
