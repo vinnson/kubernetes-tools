@@ -2,11 +2,11 @@ package main
 
 import (
 	"log"
-    "os"
+	"os"
 	"os/exec"
-    "strings"
-    "bytes"
-    "fmt"
+	"strings"
+	"bytes"
+	"fmt"
 )
 // Defining Variables
 var AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION, AWS_EMAIL_ADDRESS string
