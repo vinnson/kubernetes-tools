@@ -5,7 +5,7 @@ Prepare your AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION, AWS_E
 ```
 $ export AWS_ACCESS_KEY_ID=[Your AWS Access Key ID]
 $ export AWS_SECRET_ACCESS_KEY=[Your AWS Secret Access Key]
-$ export AWS_DEFAULT_REGION=[Your AWS Default Region (Not AZ)]
+$ export AWS_DEFAULT_REGION=[Your AWS Default Region (Not AZ)] # Default Region = ap-southeast-1
 $ export AWS_EMAIL_ADDRESS=[Your Registered Email Address from AWS]
 ```
 
