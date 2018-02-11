@@ -9,6 +9,20 @@ $ export AWS_DEFAULT_REGION=[Your AWS Default Region (Not AZ)] # Default Region 
 $ export AWS_EMAIL_ADDRESS=[Your Registered Email Address from AWS]
 ```
 
+## Alternative
+You can give out your access information by flags, there is a help
+```
+Usage of /tmp/go-build311400682/command-line-arguments/_obj/exe/run:
+  -AWS_ACCESS_KEY_ID string
+    	Your AWS Access Key ID
+  -AWS_DEFAULT_REGION string
+    	AWS Default Region: (Default: ap-southeast-1)
+  -AWS_EMAIL_ADDRESS string
+    	Registered email address for AWS
+  -AWS_SECRET_ACCESS_KEY string
+    	Your AWS Secret Access Key
+```
+
 ## Build and run it
 ```
 $ git clone https://github.com/vinnson/kubernetes-tools.git
