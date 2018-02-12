@@ -1,8 +1,8 @@
 # kubernetes Setup Script (Master)
 
 ## General Information
-Tested platform: Ubuntu:16.04
-SUDO Required? : Yes
+- Tested platform: Ubuntu:16.04
+- SUDO Required? : Yes
 
 ## Run it
 ```
