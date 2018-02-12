@@ -1,4 +1,4 @@
-# AWS ECS Key updater
+# AWS ECR Key updater
 
 ## Prerequisite
 Prepare your AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION, AWS_EMAIL_ADDRESS and put it into your environment
