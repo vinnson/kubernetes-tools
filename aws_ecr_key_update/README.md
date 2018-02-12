@@ -26,9 +26,9 @@ Usage of /tmp/go-build311400682/command-line-arguments/_obj/exe/run:
 ## Build and run it
 ```
 $ git clone https://github.com/vinnson/kubernetes-tools.git
-$ cd kubernetes-tools/ecskey_update
+$ cd kubernetes-tools/aws_ecr_key_update
 $ go build
-$ ./ecskey_update
+$ ./run
 ```
 
 This is it, you may set it to your crontab and make sure it runs within every 6 hours.
