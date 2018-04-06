@@ -22,13 +22,18 @@ Usage of /tmp/go-build311400682/command-line-arguments/_obj/exe/run:
   -AWS_SECRET_ACCESS_KEY string
     	Your AWS Secret Access Key
 ```
+## Run it
+```
+$ git clone https://github.com/vinnson/kubernetes-tools.git
+$ ./kubernetes-tools/aws_ecr_key_update/bin/aws_ecr_key_update
+```
 
-## Build and run it
+## Build it on your own
 ```
 $ git clone https://github.com/vinnson/kubernetes-tools.git
 $ cd kubernetes-tools/aws_ecr_key_update
 $ go build
-$ ./run
+$ ./aws_ecr_key_update
 ```
 
 This is it, you may set it to your crontab and make sure it runs within every 6 hours.
